@@ -121,12 +121,12 @@ public class Day1 {
 
     private static int countTotalFuel(Integer integer) {
 
-        int temp = integer;
+        int current = integer;
         int result = 0;
 
-        while (countFuel(temp) >= 0) {
-            temp = countFuel(temp);
-            result += temp;
+        while (countFuel(current) >= 0) {
+            current = countFuel(current);
+            result += current;
         }
         return result;
     }
