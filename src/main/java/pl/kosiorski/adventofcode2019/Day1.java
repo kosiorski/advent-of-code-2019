@@ -109,10 +109,29 @@ public class Day1 {
                 123712
 
         );
-        System.out.println(count(numbers));
+
+        System.out.println(countTotalFuelForList(numbers));
     }
 
-    private static int count(List<Integer> input) {
-        return input.stream().mapToInt(n -> (int) (Math.floor(n / 3) - 2)).sum();
+
+    private static int countTotalFuelForList(List<Integer> input) {
+        return input.stream().mapToInt(Day1::countTotalFuel).sum();
+    }
+
+
+    private static int countTotalFuel(Integer integer) {
+
+        int temp = integer;
+        int result = 0;
+
+        while (countFuel(temp) >= 0) {
+            temp = countFuel(temp);
+            result += temp;
+        }
+        return result;
+    }
+
+    private static int countFuel(Integer integer) {
+        return (int) Math.floor((integer / 3) - 2);
     }
 }
