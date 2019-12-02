@@ -10,7 +10,7 @@ public class Day2 {
 
         int[] test1 = {1, 9, 10, 3, 2, 3, 11, 0, 99, 30, 40, 50};
         int[] test2 = {2, 4, 4, 5, 99, 0};
-        int[] test3 = {1,1,1,1,4,99,5,6,0,99};
+        int[] test3 = {2,3,0,3,3,99};
 
 
         int[] result1 = solveProblem(test3);
@@ -34,7 +34,7 @@ public class Day2 {
 
             int position1 = data[i + 1];
             int position2 = data[i + 2];
-            int savePosition = data[i + 3];K
+            int savePosition = data[i + 3];
 
 
             if (opcode == 1) {
