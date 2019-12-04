@@ -10,7 +10,7 @@ import java.util.StringTokenizer;
 
 public class DataReader {
 
-    public static List<Integer> initializeData(String filePath) throws IOException {
+    public static List<Integer> initializeDataIntegers(String filePath) throws IOException {
         BufferedReader in = new BufferedReader(new FileReader(new File(filePath)));
         StringTokenizer st = new StringTokenizer(in.readLine(), ",");
 
@@ -18,6 +18,18 @@ public class DataReader {
 
         while (st.hasMoreTokens()) {
             result.add(Integer.valueOf(st.nextToken()));
+        }
+        return result;
+    }
+
+    public static List<String> initializeDataStrings(String filePath) throws IOException {
+        BufferedReader in = new BufferedReader(new FileReader(new File(filePath)));
+        StringTokenizer st = new StringTokenizer(in.readLine(), ",");
+
+        List<String> result = new ArrayList<>();
+
+        while (st.hasMoreTokens()) {
+            result.add(st.nextToken());
         }
         return result;
     }

@@ -1,18 +1,15 @@
 package pl.kosiorski.adventofcode2019.day1;
 
 import java.io.IOException;
-import java.util.Arrays;
 import java.util.List;
 
-import static utils.DataReader.initializeData;
+import static utils.DataReader.initializeDataIntegers;
 
 public class Day1 {
     public static void main(String[] args) throws IOException {
 
         final String filePath = "src/main/java/pl/kosiorski/adventofcode2019/day1/input-day1.txt";
-
-
-        List<Integer> input = initializeData(filePath);
+        List<Integer> input = initializeDataIntegers(filePath);
 
         System.out.println(countTotalFuelForList(input));
     }

@@ -3,17 +3,17 @@ package pl.kosiorski.adventofcode2019.day2;
 import java.util.ArrayList;
 import java.util.List;
 
-import static utils.DataReader.initializeData;
+import static utils.DataReader.initializeDataIntegers;
 
 public class Day2 {
     public static void main(String[] args) throws Exception {
 
         final String filePath = "src/main/java/pl/kosiorski/adventofcode2019/day2/input-day2.txt";
 
-        List<Integer> inputToFirstPart = initializeData(filePath);
+        List<Integer> inputToFirstPart = initializeDataIntegers(filePath);
         System.out.println("First part result: " + part1(inputToFirstPart, 12, 2));
 
-        List<Integer> inputToSecondPart = initializeData(filePath);
+        List<Integer> inputToSecondPart = initializeDataIntegers(filePath);
         System.out.println("Second part result: " + part2(inputToSecondPart));
     }
 
