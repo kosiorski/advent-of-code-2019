@@ -1,4 +1,4 @@
-package pl.kosiorski.adventofcode2019;
+package pl.kosiorski.adventofcode2019.day1;
 
 import java.util.Arrays;
 import java.util.List;
