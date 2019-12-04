@@ -1,26 +1,20 @@
 package pl.kosiorski.adventofcode2019.day2;
 
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileReader;
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.StringTokenizer;
+
+import static utils.DataReader.initializeData;
 
 public class Day2 {
     public static void main(String[] args) throws Exception {
 
-
-        String filePath = "src/main/java/pl/kosiorski/adventofcode2019/day2/input.txt";
+        final String filePath = "src/main/java/pl/kosiorski/adventofcode2019/day2/input-day2.txt";
 
         List<Integer> inputToFirstPart = initializeData(filePath);
         System.out.println("First part result: " + part1(inputToFirstPart, 12, 2));
 
         List<Integer> inputToSecondPart = initializeData(filePath);
         System.out.println("Second part result: " + part2(inputToSecondPart));
-
-
     }
 
 
@@ -77,18 +71,5 @@ public class Day2 {
         while (data.get(current) != 99);
 
         return data.get(0);
-    }
-
-
-    private static List<Integer> initializeData(String filePath) throws IOException {
-        BufferedReader in = new BufferedReader(new FileReader(new File(filePath)));
-        StringTokenizer st = new StringTokenizer(in.readLine(), ",");
-
-        List<Integer> result = new ArrayList<>();
-
-        while (st.hasMoreTokens()) {
-            result.add(Integer.valueOf(st.nextToken()));
-        }
-        return result;
     }
 }
